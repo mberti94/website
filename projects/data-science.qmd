@@ -1,0 +1,29 @@
+---
+title: "Data science project"
+---
+
+```{=html}
+<div class="pagehead"><span class="tag">Coming soon</span><h1><em>Data science project</em></h1><p>An applied machine-learning project, in progress.</p></div>
+```
+
+## Overview
+
+An applied machine-learning project on real-world data, in progress.
+
+## Approach
+
+*To be written.*
+
+## Results
+
+*To be written.*
+
+## Tools
+
+Python · scikit-learn
+
+
+
+```{=html}
+<a class="backlink" href="../projects.html">← All projects</a>
+```

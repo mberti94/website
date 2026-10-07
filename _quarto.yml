@@ -1,0 +1,31 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - fonts/
+    - img/
+    - publications.bib
+
+website:
+  title: "Maria Berti"
+  site-url: "https://mariaberti.com"
+  navbar:
+    right:
+      - href: profile.qmd
+        text: Profile
+      - href: projects.qmd
+        text: Projects
+      - href: publications.qmd
+        text: Publications
+  page-footer:
+    center: "Maria Berti · PhD · [work@mariaberti.com](mailto:work@mariaberti.com) · [GitHub](https://github.com/mberti94) · [LinkedIn](https://www.linkedin.com/in/maria-berti/)"
+
+format:
+  html:
+    theme: [none]
+    css: [fonts/fonts.css, style.css]
+    toc: false
+    anchor-sections: false
+    page-layout: article
+    title-block-banner: false
+    minimal: false

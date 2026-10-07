@@ -1,0 +1,106 @@
+---
+title: "Profile"
+---
+
+```{=html}
+<div class="pagehead"><h1><em>Profile</em></h1></div>
+
+<section class="glance2">
+  <div class="kpis">
+    <div><b>6</b><small>years of research</small></div>
+    <div><b>10</b><small>publications</small></div>
+    <div><b>15</b><small>person team led</small></div>
+    <div><b>100+</b><small>attendee conference founded</small></div>
+  </div>
+
+  <div class="gblock">
+    <h3>Path</h3>
+    <div class="tl">
+      <div style="flex:3"><span class="seg s0"></span><b>BSc Physics</b><small>Trieste · 2013–16</small></div>
+      <div style="flex:3"><span class="seg s1"></span><b>MSc Physics</b><small>Trieste · 2016–19</small></div>
+      <div style="flex:4"><span class="seg s2"></span><b>PhD</b><small>SISSA · 2019–23</small></div>
+      <div style="flex:2"><span class="seg s3"></span><b>Postdoc</b><small>Geneva · 2023–25</small></div>
+      <div style="flex:1.6"><span class="seg s4"></span><b>Data science</b><small>2025 –</small></div>
+    </div>
+  </div>
+
+  <div class="gblock">
+    <h3>Education</h3>
+    <div class="edu">
+      <div><span class="yr">2023</span><b>PhD in Astroparticle Physics</b><small>SISSA, Trieste</small><em>summa cum laude</em></div>
+      <div><span class="yr">2019</span><b>MSc in Physics</b><small>University of Trieste</small><em>summa cum laude</em></div>
+      <div><span class="yr">2016</span><b>BSc in Physics</b><small>University of Trieste</small><em>summa cum laude</em></div>
+    </div>
+  </div>
+
+  <div class="gblock">
+    <h3>Expertise</h3>
+    <div class="exp">
+      <div><h4>Methods</h4><div class="chips"><span>Mathematical modelling</span><span>High-dimensional data analysis</span><span>Parameter estimation &amp; model fitting</span></div></div>
+      <div><h4>Statistics</h4><div class="chips"><span>Bayesian inference</span><span>MCMC</span><span>Predictive modelling &amp; forecasting</span><span>Uncertainty quantification</span></div></div>
+      <div><h4>Programming</h4><div class="chips"><span>Python</span><span>SQL</span><span>Git</span><span>Bash</span><span>Fortran</span></div></div>
+      <div><h4>Data</h4><div class="chips"><span>Pandas</span><span>NumPy</span><span>SciPy</span><span>scikit-learn</span><span>Matplotlib</span><span>Tableau</span><span>Excel</span></div></div>
+      <div><h4>Environments</h4><div class="chips"><span>Jupyter</span><span>Linux</span><span>HPC clusters</span><span>LaTeX</span></div></div>
+    </div>
+  </div>
+
+  <div class="gblock">
+    <h3>Languages</h3>
+    <div>
+    <div class="langs">
+      <div class="lang"><div class="ln"><b>Italian</b><span>Native</span></div><div class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div></div>
+      <div class="lang"><div class="ln"><b>English</b><span>C2</span></div><div class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div></div>
+      <div class="lang"><div class="ln"><b>French</b><span>B2</span></div><div class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></div></div>
+    </div>
+    <p class="scale">Scale: A1 → C2 (CEFR)</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Experience</h2>
+  <div>
+    <div class="entry">
+      <div class="top"><b>Professional development</b><span class="when">2025 – present</span></div>
+      <div class="where">Machine learning &amp; data science</div>
+      <ul><li>Full-time transition into machine learning and applied data science, building on my research background in statistical modelling.</li><li>Strengthening my project management credentials.</li></ul>
+    </div>
+    <div class="entry">
+      <div class="top"><b>Postdoctoral researcher</b><span class="when">2023 – 2025</span></div>
+      <div class="where">University of Geneva</div>
+      <ul>
+        <li>Developed Bayesian frameworks to test theoretical models against large cosmological datasets, leading to 3 peer-reviewed publications.</li>
+        <li>Led a 15-member international team in the ESA Euclid Theory Science Working Group: set the roadmap, assigned workstreams and coordinated deliverables with external groups.</li>
+        <li>Founded and chaired the CosmoFONDUE conference, from fundraising (CHF 12,500) to running a 100+ person international event.</li>
+        <li>Taught Bachelor's and Master's physics courses in English and French.</li>
+      </ul>
+    </div>
+    <div class="entry">
+      <div class="top"><b>PhD researcher</b><span class="when">2019 – 2023</span></div>
+      <div class="where">SISSA, Trieste</div>
+      <ul>
+        <li>Built a statistical pipeline in Python and Fortran to forecast how well next-generation radio telescope surveys will constrain theoretical models.</li>
+        <li>Authored 4 peer-reviewed publications, taking projects independently from idea to publication.</li>
+        <li>Presented at 10+ international conferences, including 3 invited talks.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <h2>Certifications</h2>
+  <div>
+    <div class="row"><span>Data Scientist · DataCamp</span><span>2026, expected</span></div>
+    <div class="row"><span>Machine Learning Specialization · Stanford Online</span><span>2026, expected</span></div>
+    <div class="row"><span>HERMES 5 Foundations, project management · TÜV SÜD</span><span>2026</span></div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <h2>Beyond work</h2>
+  <p class="inline">Soprano in a baroque choir for 10+ years, and former ensemble conductor<i>·</i>Former vice-president of the Get In Touch student association<i>·</i>Ballet<i>·</i>Knitting</p>
+</section>
+```

@@ -1,0 +1,135 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Maria Berti",
+    "section": "",
+    "text": "Data Scientist  ·  PhD Physicist\n    Maria Berti\n    I am a theoretical physicist and data scientist, and I bridge mathematical models and real data. I find beauty in untangling the chaos of the unknown through the elegance of a rigorous model, and I enjoy turning complex problems into creative, effective solutions.\n    \n      I grew up in Trieste, where a school trip to CERN made me choose physics. In cosmology I found my balance between theory, data and code: during my PhD at SISSA and my postdoc at the University of Geneva, I built tools that test models of the Universe against real observations. Along the way I led an international team, taught in English and French, and founded a conference. I bring passion, attention to detail and a fast learner's curiosity to everything I do. Now I want to put these skills to work on meaningful, real-world problems, with a particular interest in health technology.\n    \n    \n      work@mariaberti.com"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Projects\n\n\n  \n    Bayesian inferenceSplinesMCMCModel validation\n    Is dark energy changing? Letting the data decide\n    Is the mysterious energy driving the expansion of the Universe constant, or does it change over time? I built a flexible statistical model that lets the data answer, without forcing it into a predefined shape.\n    Read more →\n  \n\n\n\n  \n    SimulationBayesian inferenceMCMCUncertainty quantification\n    What will the next giant radio telescope reveal?\n    Before a new telescope collects any data, how much will it actually tell us? I simulated realistic observations from the SKA Observatory and ran the full statistical analysis on them, to forecast how much they will sharpen our picture of the Universe.\n    Read more →\n  \n\n\n\n  \n    Pythonscikit-learn\n    Data science project\n    An applied machine-learning project on real-world data, in progress.\n    Read more →"
+  },
+  {
+    "objectID": "projects/dark-energy-desi.html",
+    "href": "projects/dark-energy-desi.html",
+    "title": "Is dark energy changing? Letting the data decide",
+    "section": "",
+    "text": "Cover art I designed for the journal issue featuring this work.\n  \n  \n    Bayesian inferenceSplinesMCMCModel validation\n    \n    A non-parametric Bayesian reconstruction of how the dark energy density evolves over cosmic time, fitted to the latest DESI baryon acoustic oscillation measurements. The method avoids assuming a functional form and lets the data decide."
+  },
+  {
+    "objectID": "projects/dark-energy-desi.html#the-problem",
+    "href": "projects/dark-energy-desi.html#the-problem",
+    "title": "Is dark energy changing? Letting the data decide",
+    "section": "The problem",
+    "text": "The problem\nSince the accelerated expansion of the Universe was discovered in 1998, the standard model of cosmology has assumed that dark energy is a constant. In 2024 the DESI survey published new measurements that hinted otherwise, and the question became one of the most debated in the field.\nMost analyses test this by choosing a specific formula for how dark energy could change, and fitting its parameters. The answer then depends on the formula. I wanted an approach closer to how a data scientist would treat an unknown function: let the data determine the shape, and measure how confident we can be in every part of it."
+  },
+  {
+    "objectID": "projects/dark-energy-desi.html#what-i-built",
+    "href": "projects/dark-energy-desi.html#what-i-built",
+    "title": "Is dark energy changing? Letting the data decide",
+    "section": "What I built",
+    "text": "What I built\nA flexible, non-parametric model. I described the dark energy density as a smooth curve defined by a small number of control points (a cubic spline). The value at each control point is a free parameter learned from the data. I chose to model the quantity that the measurements are most directly sensitive to, which made the model both easier to constrain and easier to interpret.\nData fusion across heterogeneous sources. I combined three very different datasets in a single likelihood: the cosmic microwave background (the early Universe), distance measurements from DESI galaxy clustering, and two independent catalogues of supernovae. I wrote the likelihood for the DESI data and integrated everything into an existing scientific modelling pipeline.\nBayesian inference at scale. The full model has 14 parameters with strong correlations between them. I explored the posterior with an ensemble MCMC sampler, and cross-checked it with a second, independent algorithm (Metropolis–Hastings) plus a direct optimiser for the best fit. Every result comes with a full uncertainty band, not just a point estimate.\nValidation and robustness. Before trusting the results, I checked the new pipeline against an independent, widely used code and recovered consistent answers. I then stress-tested the conclusions in two ways:\n\nOverfitting: a flexible model can fit noise. I compared an 8-point and a 4-point version of the model. The simpler one gave smoother curves with the same overall features, which tells us the signal is not an artefact of too much freedom.\nData quality: an open question was whether a small subset of nearby supernovae carried a calibration offset. I applied the proposed correction to only those points and measured how much the conclusions moved."
+  },
+  {
+    "objectID": "projects/dark-energy-desi.html#results",
+    "href": "projects/dark-energy-desi.html#results",
+    "title": "Is dark energy changing? Letting the data decide",
+    "section": "Results",
+    "text": "Results\n\n  \n  The reconstructed history of dark energy. Each panel shows the model's estimate (solid line) with 68% and 95% uncertainty bands, using one of the two supernova catalogues (left and right). The flat black line is what a constant dark energy would look like. Top: how far dark energy deviates from a constant at each epoch (later times on the left). Bottom: a derived quantity describing its behaviour.\n\n\nA mild preference for change. The data favour a dark energy that evolves over time, but the evidence is moderate: about 2.4σ with one supernova catalogue and 1.3σ with the other. That is weaker than claimed with the simpler, fixed-formula approach. Choosing a more flexible model gives a more honest picture of the uncertainty.\nLocalising the signal. Because the model estimates each epoch separately, I could see where the deviation comes from. For the stronger result, the evidence is driven almost entirely by a single point in the recent Universe. That is the kind of insight a single summary number would hide.\n\n\n  \n  Testing a suspected data issue. Joint and marginal posterior distributions for key parameters, before (green) and after (blue) correcting a small group of nearby supernovae for a suspected calibration offset. The bottom-right panel is the parameter that drives the signal; the dotted line is the \"constant dark energy\" value.\n\n\nA small data issue can create a big signal. Correcting the suspected offset in only the nearest supernovae was enough to remove the tension completely: the key parameter moved from 3σ away from the standard value to fully consistent with it. The correction also shifted other parameters, showing the trade-off it introduces. This is a concrete example of why auditing input data matters as much as the model."
+  },
+  {
+    "objectID": "projects/dark-energy-desi.html#techniques",
+    "href": "projects/dark-energy-desi.html#techniques",
+    "title": "Is dark energy changing? Letting the data decide",
+    "section": "Techniques",
+    "text": "Techniques\n\n  ModellingNon-parametric regression with splines, choosing an interpretable target variable, controlling model complexity.\n  InferenceBayesian analysis, MCMC in high dimensions, convergence and sampler cross-checks, uncertainty quantification.\n  DataCombining heterogeneous datasets in one likelihood, detecting and testing systematic errors.\n  EngineeringExtending a large scientific codebase, writing custom likelihoods, validating against reference tools.\n\n\nRead the full paper\n\n← All projects"
+  },
+  {
+    "objectID": "projects/data-science.html",
+    "href": "projects/data-science.html",
+    "title": "Data science project",
+    "section": "",
+    "text": "Coming soonAn applied machine-learning project, in progress."
+  },
+  {
+    "objectID": "projects/data-science.html#overview",
+    "href": "projects/data-science.html#overview",
+    "title": "Data science project",
+    "section": "Overview",
+    "text": "Overview\nAn applied machine-learning project on real-world data, in progress."
+  },
+  {
+    "objectID": "projects/data-science.html#approach",
+    "href": "projects/data-science.html#approach",
+    "title": "Data science project",
+    "section": "Approach",
+    "text": "Approach\nTo be written."
+  },
+  {
+    "objectID": "projects/data-science.html#results",
+    "href": "projects/data-science.html#results",
+    "title": "Data science project",
+    "section": "Results",
+    "text": "Results\nTo be written."
+  },
+  {
+    "objectID": "projects/data-science.html#tools",
+    "href": "projects/data-science.html#tools",
+    "title": "Data science project",
+    "section": "Tools",
+    "text": "Tools\nPython · scikit-learn\n← All projects"
+  },
+  {
+    "objectID": "projects/radio-forecasts.html",
+    "href": "projects/radio-forecasts.html",
+    "title": "What will the next giant radio telescope reveal?",
+    "section": "",
+    "text": "SimulationBayesian inferenceMCMCUncertainty quantification\n    \n    A forecast of the cosmological constraints from 21cm intensity mapping with the SKA Observatory. I simulated the redshift-space power spectrum monopole and quadrupole in six redshift bins, implemented their likelihood with the full multipole covariance in an MCMC sampler, and assessed the constraining power alone and combined with Planck CMB data."
+  },
+  {
+    "objectID": "projects/radio-forecasts.html#the-problem",
+    "href": "projects/radio-forecasts.html#the-problem",
+    "title": "What will the next giant radio telescope reveal?",
+    "section": "The problem",
+    "text": "The problem\nThe SKA Observatory, under construction in South Africa and Australia, will be one of the largest radio telescopes ever built. One of its goals is to map how neutral hydrogen, the most common element in the Universe, is distributed across billions of years of cosmic history. That map traces the invisible dark matter, and can be used to measure the basic parameters of our cosmological model.\nBefore a telescope like this collects any data, a key question is how much it will actually tell us, and whether it adds anything to the measurements we already have. Answering it means building a realistic simulation of data that does not exist yet, and running the full analysis on it as if it were real."
+  },
+  {
+    "objectID": "projects/radio-forecasts.html#what-i-built",
+    "href": "projects/radio-forecasts.html#what-i-built",
+    "title": "What will the next giant radio telescope reveal?",
+    "section": "What I built",
+    "text": "What I built\nA realistic synthetic dataset. I generated mock observations of the hydrogen signal in six slices of cosmic time, using the planned survey design of the telescope. The simulation includes the instrument’s limitations: the blurring caused by the size of the telescope beam and the instrumental noise. These two effects set which scales carry useful information at each epoch.\nInformative summary statistics. Instead of using a single measurement, I compressed the data into two complementary summary statistics, which capture how the signal varies with direction on the sky. Together they carry more information than either alone. I built their full covariance matrix, including the correlations between the two, and measured how much each choice changes the signal-to-noise.\nA custom likelihood in an MCMC pipeline. I implemented the theoretical predictions and the likelihood for the new data in an existing MCMC code, and checked the pipeline by reproducing the published results of the Planck satellite. I then explored the posterior of the full cosmological model, both for the radio data alone and combined with Planck.\nAccounting for what we don’t know. The link between hydrogen and dark matter depends on astrophysics that is not well understood. I modelled this ignorance with additional nuisance parameters, marginalised over them, and checked how much information survives. To keep the sampling efficient, I replaced twelve free parameters with a smooth polynomial trend described by eight: the results were the same, and convergence was faster.\nTesting the limits of the model. Finally, I extended the dataset to smaller scales, where the simple model breaks down and extra noise terms must be included, to see how much additional information could be gained."
+  },
+  {
+    "objectID": "projects/radio-forecasts.html#results",
+    "href": "projects/radio-forecasts.html#results",
+    "title": "What will the next giant radio telescope reveal?",
+    "section": "Results",
+    "text": "Results\n\n  \n  The simulated dataset. The two summary statistics (top and bottom) measured in six slices of cosmic time, shown in different colours, with the expected measurement uncertainty on every point. This is the data the telescope is expected to deliver, built before the telescope exists.\n\n\nCompetitive on its own. The radio data alone constrain five of the six parameters of the standard cosmological model. Key quantities such as the expansion rate of the Universe are measured to about 7%, comparable with other independent probes.\nRobust to unknown astrophysics. Adding the nuisance parameters erases the information on the overall amplitude of the signal, as expected, but leaves the constraints on the expansion rate and the amount of dark matter unchanged. Splitting the data into many time slices is what makes the result robust.\n\n\n  \n  Combining two datasets. Joint and marginal posterior distributions for the cosmological parameters, from Planck alone (light blue), Planck plus the simulated radio data (green), and the same including the astrophysical nuisance parameters (orange). Smaller contours mean more precise measurements.\n\n\nBetter together. Combined with Planck, the radio data shrink the uncertainty on the expansion rate from 0.79% to 0.16%, and on the amount of dark matter from 0.99% to 0.25%, roughly a factor of four. The gain comes from the two datasets being uncertain in different directions: where one cannot distinguish between two parameters, the other can. In the figure, the elongated blue ellipses collapse into small green ones.\nMore scales, more information. Including the smaller scales improves the radio-only measurement of the expansion rate to 0.49%, better than Planck alone."
+  },
+  {
+    "objectID": "projects/radio-forecasts.html#techniques",
+    "href": "projects/radio-forecasts.html#techniques",
+    "title": "What will the next giant radio telescope reveal?",
+    "section": "Techniques",
+    "text": "Techniques\n\n  SimulationGenerating realistic synthetic data with instrument effects and noise, to test an analysis before real data exist.\n  InferenceBayesian analysis, MCMC in high dimensions, marginalising over nuisance parameters, uncertainty quantification.\n  DataDesigning summary statistics, building full covariance matrices, combining independent datasets in one likelihood.\n  EngineeringExtending a large scientific codebase, writing custom likelihoods, reducing model dimensionality for faster convergence.\n\n\nRead the full paper\n\n← All projects"
+  },
+  {
+    "objectID": "profile.html",
+    "href": "profile.html",
+    "title": "Profile",
+    "section": "",
+    "text": "Profile\n\n\n  \n    6years of research\n    10publications\n    15person team led\n    100+attendee conference founded\n  \n\n  \n    Path\n    \n      BSc PhysicsTrieste · 2013–16\n      MSc PhysicsTrieste · 2016–19\n      PhDSISSA · 2019–23\n      PostdocGeneva · 2023–25\n      Data science2025 –\n    \n  \n\n  \n    Education\n    \n      2023PhD in Astroparticle PhysicsSISSA, Triestesumma cum laude\n      2019MSc in PhysicsUniversity of Triestesumma cum laude\n      2016BSc in PhysicsUniversity of Triestesumma cum laude\n    \n  \n\n  \n    Expertise\n    \n      MethodsMathematical modellingHigh-dimensional data analysisParameter estimation & model fitting\n      StatisticsBayesian inferenceMCMCPredictive modelling & forecastingUncertainty quantification\n      ProgrammingPythonSQLGitBashFortran\n      DataPandasNumPySciPyscikit-learnMatplotlibTableauExcel\n      EnvironmentsJupyterLinuxHPC clustersLaTeX\n    \n  \n\n  \n    Languages\n    \n    \n      ItalianNative\n      EnglishC2\n      FrenchB2\n    \n    Scale: A1 → C2 (CEFR)\n    \n  \n\n\n\n  Experience\n  \n    \n      Professional development2025 – present\n      Machine learning & data science\n      Full-time transition into machine learning and applied data science, building on my research background in statistical modelling.Strengthening my project management credentials.\n    \n    \n      Postdoctoral researcher2023 – 2025\n      University of Geneva\n      \n        Developed Bayesian frameworks to test theoretical models against large cosmological datasets, leading to 3 peer-reviewed publications.\n        Led a 15-member international team in the ESA Euclid Theory Science Working Group: set the roadmap, assigned workstreams and coordinated deliverables with external groups.\n        Founded and chaired the CosmoFONDUE conference, from fundraising (CHF 12,500) to running a 100+ person international event.\n        Taught Bachelor's and Master's physics courses in English and French.\n      \n    \n    \n      PhD researcher2019 – 2023\n      SISSA, Trieste\n      \n        Built a statistical pipeline in Python and Fortran to forecast how well next-generation radio telescope surveys will constrain theoretical models.\n        Authored 4 peer-reviewed publications, taking projects independently from idea to publication.\n        Presented at 10+ international conferences, including 3 invited talks.\n      \n    \n  \n\n\n\n\n  Certifications\n  \n    Data Scientist · DataCamp2026, expected\n    Machine Learning Specialization · Stanford Online2026, expected\n    HERMES 5 Foundations, project management · TÜV SÜD2026\n  \n\n\n\n\n\n  Beyond work\n  Soprano in a baroque choir for 10+ years, and former ensemble conductor·Former vice-president of the Get In Touch student association·Ballet·Knitting"
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "PublicationsComplete record on INSPIRE  ·  BibTeX\n2026PreprintThe impact of evolving dark energy on the Weyl potential measured from the Dark Energy Survey Year 3 dataB. Rosatello, G. Ye, M. Berti, I. Tutusaus, N. Grimm, C. BonvinPreprint (2026) arXiv3 citationsPreprintCosmology with HI Intensity MappingL. Wolz, et al. (incl. M. Berti)Preprint (2026) arXivPublishedWeighing neutrinos with 21cm intensity mapping at the SKAOG. Autieri, M. Berti, M. Spinelli, B. S. Haridasu, M. VielJCAP 01 (2026) 050 arXivDOI4 citations\n2025PublishedReconstructing the dark energy density in light of DESI BAO observationsM. Berti, E. Bellini, C. Bonvin, M. Kunz, M. Viel, M. ZumalacárreguiPhys. Rev. D 112 (2025) 023518 arXivDOI61 citations\n2024Published21 cm intensity mapping cross-correlation with galaxy surveys: current and forecasted cosmological parameters estimation for the SKAOM. Berti, M. Spinelli, M. VielMNRAS 529 (2024) 4803 arXivDOI14 citations\n2023ThesisProbing the ΛCDM Universe and beyond with present and future 21cm Intensity Mapping surveysM. BertiPhD thesis, SISSA (2023) PublishedCosmological Probes of Structure Growth and Tests of GravityJ. Hou, J. Bautista, M. Berti, C. Cuesta-Lazaro, C. Hernández-Aguayo, T. Tröster, J. ZhengUniverse 9 (2023) 302 arXivDOI24 citationsPublishedMultipole expansion for 21 cm intensity mapping power spectrum: forecasted cosmological parameters estimation for the SKA ObservatoryM. Berti, M. Spinelli, M. VielMNRAS 521 (2023) 3221 arXivDOI19 citationsPublishedTesting gravity with gravitational waves × electromagnetic probes cross-correlationsG. Scelfo, M. Berti, A. Silvestri, M. VielJCAP 02 (2023) 010 arXivDOI21 citationsProceedingsConstraining beyond ΛCDM models with 21cm intensity mapping forecast observations combined with latest CMB dataM. BertiProc. 16th Marcel Grossmann Meeting (2023) DOI\n2022PublishedConstraining beyond ΛCDM models with 21cm intensity mapping forecasted observations combined with latest CMB dataM. Berti, M. Spinelli, B. S. Haridasu, M. Viel, A. SilvestriJCAP 01 (2022) 018 arXivDOI14 citations"
+  }
+]

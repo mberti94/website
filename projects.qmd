@@ -1,0 +1,34 @@
+---
+title: "Projects"
+---
+
+```{=html}
+<div class="pagehead"><h1><em>Projects</em></h1></div>
+
+<div class="proj">
+  <div>
+    <div class="tags"><span class="tag">Bayesian inference</span><span class="tag">Splines</span><span class="tag">MCMC</span><span class="tag">Model validation</span></div>
+    <h3><a href="projects/dark-energy-desi.html">Is dark energy changing? Letting the data decide</a></h3>
+    <p>Is the mysterious energy driving the expansion of the Universe constant, or does it change over time? I built a flexible statistical model that lets the data answer, without forcing it into a predefined shape.</p>
+    <a class="more" href="projects/dark-energy-desi.html">Read more →</a>
+  </div>
+</div>
+
+<div class="proj">
+  <div>
+    <div class="tags"><span class="tag">Simulation</span><span class="tag">Bayesian inference</span><span class="tag">MCMC</span><span class="tag">Uncertainty quantification</span></div>
+    <h3><a href="projects/radio-forecasts.html">What will the next giant radio telescope reveal?</a></h3>
+    <p>Before a new telescope collects any data, how much will it actually tell us? I simulated realistic observations from the SKA Observatory and ran the full statistical analysis on them, to forecast how much they will sharpen our picture of the Universe.</p>
+    <a class="more" href="projects/radio-forecasts.html">Read more →</a>
+  </div>
+</div>
+
+<div class="proj soon">
+  <div>
+    <div class="tags"><span class="tag">Python</span><span class="tag">scikit-learn</span></div>
+    <h3><a href="projects/data-science.html">Data science project</a></h3>
+    <p>An applied machine-learning project on real-world data, in progress.</p>
+    <a class="more" href="projects/data-science.html">Read more →</a>
+  </div>
+</div>
+```

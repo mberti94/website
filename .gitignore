@@ -1,0 +1,6 @@
+.quarto/
+
+/.quarto/
+**/*.quarto_ipynb
+.DS_Store
+_quarto_internal_scss_error.scss
