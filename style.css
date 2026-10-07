@@ -252,3 +252,8 @@ footer.footer .nav-footer-left,footer.footer .nav-footer-right{display:none;}
 footer.footer .nav-footer-center{flex:1 1 auto; max-width:none; text-align:center;}
 footer.footer .nav-footer-center p{margin:0; white-space:nowrap;}
 @media(max-width:600px){footer.footer .nav-footer-center p{white-space:normal}}
+
+/* keep email and icons on one line on phones */
+@media(max-width:500px){.contact{flex-wrap:nowrap; gap:1rem}.contact .mail{font-size:.85rem; gap:.45rem}.icons{gap:.8rem}.inspire-logo{height:15px}}
+@media(max-width:400px){.contact{gap:.7rem}.contact .mail{font-size:.8rem; gap:.35rem}.contact svg{width:18px; height:18px}.icons{gap:.6rem}.inspire-logo{height:13px}}
+@media(max-width:340px){.contact{flex-wrap:wrap}}

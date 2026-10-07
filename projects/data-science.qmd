@@ -1,9 +1,9 @@
 ---
-title: "Data science project"
+title: "Is my cycle normal?"
 ---
 
 ```{=html}
-<div class="pagehead"><span class="tag">Coming soon</span><h1><em>Data science project</em></h1><p>An applied machine-learning project, in progress.</p></div>
+<div class="pagehead"><span class="tag">Coming soon</span><h1><em>Is my cycle normal?</em></h1><p>An applied machine-learning project, in progress.</p></div>
 ```
 
 ## Overview

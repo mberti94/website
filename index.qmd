@@ -4,7 +4,7 @@ pagetitle: "Maria Berti · Data Scientist"
 ---
 
 ```{=html}
-<section class="hero split">
+<section class="hero">
   <div class="herotext">
     <div class="eyebrow">Data Scientist &nbsp;·&nbsp; PhD Physicist</div>
     <h1>Maria <em>Berti</em></h1>
@@ -21,6 +21,7 @@ pagetitle: "Maria Berti · Data Scientist"
       </div>
     </div>
   </div>
-  <div class="portrait-wrap"><img class="portrait" src="img/maria.jpg" alt="Portrait of Maria Berti"></div>
+  <!-- Portrait hidden for now; to restore, uncomment and set the section class back to "hero split".
+  <div class="portrait-wrap"><img class="portrait" src="img/maria.jpg" alt="Portrait of Maria Berti"></div> -->
 </section>
 ```
