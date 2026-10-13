@@ -257,3 +257,10 @@ footer.footer .nav-footer-center p{margin:0; white-space:nowrap;}
 @media(max-width:500px){.contact{flex-wrap:nowrap; gap:1rem}.contact .mail{font-size:.85rem; gap:.45rem}.icons{gap:.8rem}.inspire-logo{height:15px}}
 @media(max-width:400px){.contact{gap:.7rem}.contact .mail{font-size:.8rem; gap:.35rem}.contact svg{width:18px; height:18px}.icons{gap:.6rem}.inspire-logo{height:13px}}
 @media(max-width:340px){.contact{flex-wrap:wrap}}
+/* homepage: About me section at the end */
+.about{display:grid; grid-template-columns:200px 1fr; gap:3.5rem; align-items:start; padding:3.5rem 0 4rem; border-top:1px solid var(--line);}
+.about .portrait-wrap{max-width:200px;}
+.about .portrait-wrap{margin-top:.5rem;}
+.about h2{font-family:var(--serif); font-weight:400; font-size:2rem; color:var(--ink); margin:0 0 1rem; border:none; line-height:1.2;}
+.about p{margin:0 0 1rem; color:#4a3f43; max-width:600px;}
+@media(max-width:700px){.about{grid-template-columns:1fr; gap:1.8rem; padding:2.5rem 0 3rem}.about .portrait-wrap{max-width:150px}}

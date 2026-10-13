@@ -8,9 +8,10 @@ pagetitle: "Maria Berti · Data Scientist"
   <div class="herotext">
     <div class="eyebrow">Data Scientist &nbsp;·&nbsp; PhD Physicist</div>
     <h1>Maria <em>Berti</em></h1>
-    <p class="lead">I am a theoretical physicist and data scientist, and I bridge mathematical models and real data. I find beauty in untangling the chaos of the unknown through the elegance of a rigorous model, and I enjoy turning complex problems into creative, effective solutions.</p>
+    <p class="lead">I am a data scientist and a theoretical physicist. My expertise lies at the intersection of theory and data.</p>
+    <p class="lead">Welcome to my homepage!</p>
     <div class="story">
-      <p>I grew up in Trieste, where a school trip to CERN made me choose physics. In cosmology I found my balance between theory, data and code: during my PhD at SISSA and my postdoc at the University of Geneva, I built tools that test models of the Universe against real observations. Along the way I led an international team, taught in English and French, and founded a conference. I bring passion, attention to detail and a fast learner's curiosity to everything I do. Now I want to put these skills to work on meaningful, real-world problems, with a particular interest in health technology.</p>
+      <p>You can read more about me below and in my <a href="profile.html">professional profile</a>. Check out a selection of my data <a href="projects.html">projects</a> or browse my scientific <a href="publications.html">publications</a>.</p>
     </div>
     <div class="contact">
       <a class="mail" href="mailto:work@mariaberti.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg><span>work@mariaberti.com</span></a>
@@ -23,5 +24,22 @@ pagetitle: "Maria Berti · Data Scientist"
   </div>
   <!-- Portrait hidden for now; to restore, uncomment and set the section class back to "hero split".
   <div class="portrait-wrap"><img class="portrait" src="img/maria.jpg" alt="Portrait of Maria Berti"></div> -->
+</section>
+
+<section class="about">
+  <div class="portrait-wrap"><img class="portrait" src="img/maria.jpg" alt="Portrait of Maria Berti"></div>
+  <div class="abouttext">
+    <h2>About me</h2>
+    <p>I grew up in Trieste, a city in the north-east of Italy, where the fresh, salty sea air carries a breath of science and innovation. There I studied physics and specialised in cosmology, the branch of physics shared by theoretical physics and astrophysics that studies our Universe's birth, history and structure at very large scales.</p>
+    <p>During my PhD at <a href="https://www.sissa.it">SISSA</a>, an international school of excellence devoted entirely to doctoral research, and later as a member of the <a href="https://cosmology.unige.ch/">cosmology group</a> at the University of Geneva, I contributed to understanding why the Universe we live in is in a phase of accelerated expansion. The cause of this acceleration is a mysterious element of reality called Dark Energy, so elusive that what it is made of and how we can describe it mathematically remain unclear.</p>
+    <p>My job sat at the intersection between theory and observations. With my expertise in both mathematical modelling and data analysis, I studied if and how current (and future) data themselves can lead us to a better understanding of the underlying theory that describes Dark Energy. To this end, I built and used Bayesian inference tools to test a variety of models based on general relativity, in the quest to find the one that truly describes the Universe's evolution.</p>
+    <p>Along the way, I led several projects and international teams, taught at university level in English and French, and founded the <a href="https://indico-dpt.unige.ch/event/1/">CosmoFONDUE conference</a> with my colleagues at UniGe.</p>
+    <p>After six years in academia, I decided to challenge myself in a new context. I am now moving into industry, eager to bring my expertise in bridging theoretical models and data to problems on far smaller scales than the cosmos. In particular, I am drawn to how data can offer powerful insights into health and help improve people's lives.</p>
+    <p>With this goal in mind, I am adapting and expanding my skills for real-world, industry settings: I am earning certifications in project management and data science, deepening my knowledge of machine-learning theory and tools, and keeping pace with the fast-moving world of AI.</p>
+    <p>In the meantime, I have started working on my first health-data project: exploring whether basal body temperature can offer new insights into endometriosis and support its diagnosis. Follow my progress on my <a href="projects.html">projects page</a> and on <a href="https://github.com/mberti94">GitHub</a>.</p>
+    <p>My journey through physics took me from Trieste to Geneva, and I now live in Lausanne. Outside work, I love singing (I have sung soprano in a baroque choir for more than ten years and used to conduct an amateur ensemble), classical ballet and knitting.</p>
+    <p>If you share an interest in data, science or health tech, or see an opportunity to work together, I would be glad to connect.</p>
+    <p>Thank you for getting to know me!</p>
+  </div>
 </section>
 ```
