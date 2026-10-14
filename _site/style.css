@@ -264,3 +264,6 @@ footer.footer .nav-footer-center p{margin:0; white-space:nowrap;}
 .about h2{font-family:var(--serif); font-weight:400; font-size:2rem; color:var(--ink); margin:0 0 1rem; border:none; line-height:1.2;}
 .about p{margin:0 0 1rem; color:#4a3f43; max-width:600px;}
 @media(max-width:700px){.about{grid-template-columns:1fr; gap:1.8rem; padding:2.5rem 0 3rem}.about .portrait-wrap{max-width:150px}}
+/* menu band: keeps the menu readable when it slides over the page text */
+header#quarto-header{background:var(--blush); border-bottom:1px solid var(--line);}
+.navbar{padding:1.1rem 0 .9rem!important;}
