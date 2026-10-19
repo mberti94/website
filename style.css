@@ -288,3 +288,6 @@ header#quarto-header.headroom--not-top .navbar{padding:.15rem 0 .1rem!important;
 .talk:hover .t{color:var(--rose);}
 .talk .a{display:block; font-size:.9rem; color:var(--muted); margin-top:.4rem;}
 @media(max-width:700px){.talk{grid-template-columns:1fr; gap:.9rem}}
+.talk .thumb,.talk .t{border-bottom:none!important;}
+.talk .thumb:hover img{opacity:.85;}
+.talk .t:hover{color:var(--rose);}
