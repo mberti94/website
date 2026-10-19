@@ -79,7 +79,7 @@ title: "Profile"
       <div class="top"><b>Postdoctoral researcher</b><span class="when">2023 – 2025</span></div>
       <div class="where">University of Geneva</div>
       <ul>
-        <li>Developed Bayesian frameworks to test theoretical models against large cosmological datasets, leading to 3 peer-reviewed publications.</li>
+        <li>Developed Bayesian frameworks to test theoretical models against large cosmological datasets, leading to 5 peer-reviewed publications.</li>
         <li>Led a 15-member international team in the ESA Euclid Theory Science Working Group: set the roadmap, assigned workstreams and coordinated deliverables with external groups.</li>
         <li>Founded and chaired the CosmoFONDUE conference, from fundraising (CHF 12,500) to running a 100+ person international event.</li>
         <li>Taught Bachelor's and Master's physics courses in English and French.</li>
